@@ -47,8 +47,23 @@ arr[0]=10;  arr[1]=20,, similarly ,, what would you do for the 1000 elements to 
       Sol - // When you give objects 
         aa, bb, cc, dd   or a, b, c, d  // 4 objects  for diagram in storage in the book 
         or - str[1]= "Raj", str[2] ="blue ", str[3]= "rocket" etc.... // here the array str holds the ref. varible (stack)i.e str = [ref.var1, ref.var2, 3, 4],, and each ref. var has its value like raj, blue(objects stored in the heap ,, a run time allocation ) etc ,
-    
-  ================================================================================================================================================================
+
+
+        --------------------- Arrays passing in the function -----------------------------
+  lass passingFunction{
+        main(){
+          int[] nums= {3, 4, 5, 12};
+          sop(Arrays.toString(nums ));
+          change(nums );
+          sop(Arrays.toString(nums ));
+
+            }
+        static void change (int [] arr){   // passing the array in the function ,, you can see the tha arrayu passed oin this function is arr not the one defined in the in the main function i.e. nums 
+          arr[0]=99;   // now we are changing the value of arr [0] =99;  , now the 2 arrays i.e. nums and arr ar pointing to the same objects in the heap ,, so the vlaue of the nums[0] wiull be changed to 99
+  }
+        solution - 
+          arr = [99, 4,5,12]  n for the nums =[99, 4,5, 12],, this situation ,, the 2 arrays pointing to same objects called MUTABILITY ,,
+          The Mutability is applicable to arrays in java not in the Strings ,, Strings are non mutability  ================================================================================================================================================================
   ==========================================================================================================================================================
   Problems on array 
 1] revers an given Array - 
