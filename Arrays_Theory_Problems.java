@@ -63,7 +63,7 @@ arr[0]=10;  arr[1]=20,, similarly ,, what would you do for the 1000 elements to 
   }
         solution - 
           arr = [99, 4,5,12]  n for the nums =[99, 4,5, 12],, this situation ,, the 2 arrays pointing to same objects called MUTABILITY ,,
-          The Mutability is applicable to arrays in java not in the Strings ,, Strings are non mutability  ================================================================================================================================================================
+          The Mutability is applicable to arrays in java not in the Strings ,, Strings are non mutability,, in java to add values at the index like as we do in arrays ,, we use String Builders in java  ================================================================================================================================================================
   ==========================================================================================================================================================
   Problems on array 
 1] revers an given Array - 
