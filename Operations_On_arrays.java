@@ -108,11 +108,44 @@ mian(){
 
 
 
+-------------------------------------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxx-------------------------------------------------------------
 
+ linear and  Binary Search of an array - 
 
+  Linear search  - in this searching the element (key) in an array by searching each elemnt in array starting from index 0 ;
+                    in Linear search it is possible to search only pne element ,, if there are more than one key element then it snot possible ,, i.e unique set of elements of should be present in an array 
+                      
+  - int [] arr = {8,9,4,7,6,3,10,5,14,2};   indexs = {0,1,2,3,4,5,6,7,8,9}
+size = 10  ; length = 10 ; 
 
+ex - search key = 5; // checking linearly one by one 
+if 5 is present --- Sucessfull search 
+if 12 is present --- Unsucessfull search
 
+Psudocode -  
+  an use for or while loop 
+public int linearSearch(arr, key ){
+  for (i = 0 ; i<length-1(10-1=9); i++){
+  if (key==arr[i]){
+    return i; 
+  }
+  return -1;
+  }
+}  
 
+Time Complexity   -  usually measured by the amount of  Work done or read the code 
+for loop may repeat n no. of time or 1 times ---- 
+for sucessfull case 
+  min = 1 time  Best case for loop runs min 1 times
+  max = n time  worst case for loop runs n times 
   
+for Unsucessfull case 
+  max = n time  worst case
+
+  Avereage time taken= 
+  1 elemnt - 1 comparison , lly 2 element - 2 comparisons ,, n element = ==1+2+3 ...+n/n  = (n+1)/2;
+
+  so mostly we depend upon the worst case - 
+    
 
 
