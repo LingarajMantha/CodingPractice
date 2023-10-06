@@ -73,9 +73,146 @@ private class Node {
   private int value ; 
   private Node next;  //this is just a pointer , pointing to the object/ element which user intilized 
 
-  public Node (int value ){
-    this.valye = value ; 
+  public Node (int value ){ //constructor 
+    this.value = value ; 
     this.next = next ; 
     
   }
 } 
+
+
+  wrting a program using insertFirst and display method ; 
+
+public class Main {
+  p s v m (String [] args ){
+    LL list = new LL();
+    list.insertFirst(3);
+    list.insertFirst(2);
+    list.insertFirst(8);
+    list.insertFirst(17);
+    list.insertLast(17);
+    list.insert(24(value), 3(index));
+    list.display();
+    lsit.dleteFirst(val);
+     list.display();
+
+    Syso (list.deletelast());
+    list.display ();    // to print list after deleting the last element ; 
+    
+  }
+}
+
+
+      ===================================================================
+3-->4-->5-->1-->--18 
+INSERTING THE ELEMENT AT THE END---
+
+publiuc void insertLast (int value ){
+  
+  if (tail==null){
+  insertFirst (value);
+  return ; 
+}
+  Node node = new node Node (val);
+  tail.next = node ; 
+  tail= node ; 
+  size++; 
+ }
+
+=============================================================================
+INSERTING A ELEMENT AT GIVE NTH POSITON IN LL
+  
+
+3-->4-->5-->1-->--18 (indexs - 0,1,2,3,4)   inserting next to 5 i.e 9  ;
+
+3-->4-->5-->9-->1-->--18 (inserting at index 3 )
+
+  first reach at the 5 , then next is 9 , i.e. node.next = 9 , and stor the 1 in temp , so not lose address / link of that ,, 
+
+  public void insert (int val, int index ){
+  if (index==0){
+    insertFirst(val);
+    return ;
+  }
+  if (index==size){
+    insertLast(val);
+    return ;
+   }
+//if we need to insert at the index , we need to go till index 2 , then 
+  
+  Node temp = head ; //currenlty head and tempo is index 0 index 0 
+  for (int i=1; i<index; i++){
+    temp= temp.next;   ///next is also a pointer , 
+  }
+  Node node = new Node (val , temp.next)(Node (val , temp.next) , is constructor , just initilizing the values in the constuctor  ,)
+    temp.next = node ; 
+  size++; 
+  }
+
+
+========================================================================================================================================
+  DELETING THE VALUES FROM THE FIRST , LAST AND AT THE GIVE INDEX -->
+
+  3-->4-->5-->1-->--18
+
+1] - Deleting at the Head - i.e head= 4 
+
+just move head to next ,, thats it ,, 
+
+
+  for a single element in the list - 3 (both the head and tail are pointing to them ,, then after deleting , both the head and tail should point to the null)
+
+
+  public int deleteFirst (){
+int val = head.value ;
+  head= head.next; 
+  if (head==null){
+    tail= null;
+  }
+  size -- ;
+  return val ;
+  
+  }
+-----------------------------------------
+How to delete the TAIL -- 
+
+Node secondlast = get (size-2);
+ont val = tail.value ; 
+tail = secondLast; 
+tail.nest= null; 
+return val;
+
+
+
+  
+writing a get function a to get the second the last elemtn in the list -- 
+
+  publuc Node get (int index);
+Node node = head ;
+for (int = 0 l i<index; i++){
+  node = node.next; 
+  
+}
+return node ; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
