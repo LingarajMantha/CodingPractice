@@ -1,4 +1,9 @@
 Linked Lists  -- -> 
+
+  NOTE - In summary, "head" and "tail" are references to the first and last nodes in a linked list, respectively, while "next" is a pointer/reference within each node that points to the next node in the sequence,
+  facilitating traversal.
+
+  
 important to know how to work with the Head ,, remianing is easy .
   3-->4-->5-->1-->--18(3 is head and 18 is tail ) where each elemnt is of tyoe Node 
   ex. - class Node {
