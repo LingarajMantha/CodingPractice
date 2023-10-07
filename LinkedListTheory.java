@@ -196,9 +196,9 @@ How to delete the TAIL --
 
   
 Node secondlast = get (size-2);
-ont val = tail.value ; 
+int val = tail.value ; 
 tail = secondLast; 
-tail.nest= null; 
+tail.next= null; 
 return val;
 
 
