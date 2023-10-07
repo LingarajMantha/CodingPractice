@@ -132,7 +132,7 @@ INSERTING A ELEMENT AT GIVE NTH POSITON IN LL
 
 3-->4-->5-->9-->1-->--18 (inserting at index 3 )
 
-  first reach at the 5 , then next is 9 , i.e. node.next = 9 , and stor the 1 in temp , so not lose address / link of that ,, 
+  first reach at the 5 , then next is 9 , i.e. node.next = 9 , and store the 1 in temp , so not lose address / link of that ,, 
 
   public void insert (int val, int index ){
   if (index==0){
@@ -145,7 +145,7 @@ INSERTING A ELEMENT AT GIVE NTH POSITON IN LL
    }
 //if we need to insert at the index , we need to go till index 2 , then 
   
-  Node temp = head ; //currenlty head and tempo is index 0 index 0 
+  Node temp = head ; //currenlty head and temp is index 0 index 0 
   for (int i=1; i<index; i++){
     temp= temp.next;   ///next is also a pointer , 
   }
@@ -243,7 +243,7 @@ and if we have only on node in list   i.e - 3 (both head and tail are pointing t
   }
 syso(list.deleteFirst()); 
 
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------Deleteing the Last Element of the Lsit or at a given index --------------------------------
 
   we cant do tail.previous (we can do this in double linked list  )
@@ -270,9 +270,24 @@ tail.next= null;
 return val;
 
 
-  
 
+DELETING AT A GIVEN INDEX -- > 
+  public int delete (int index)  at a given index value 
+  if (index == 0){
+  return deleteFirst();
+}
+if (index == size - 1){
+  return deleteLast();
+}
 
+Node prev = get (index - 1)       //3->5->8->9->17->null    if you want to remove 8 (index ),, then be at the 5 (index - 1)
+  int val = prev.next.value ;      //we got the value i.e 8 ,, now we need to break a chain or link b/w thw 5-> 8
+  prev.next = prev.next.next;    //3->5->9->17->null
+                                       |
+return val;                            8     // no way to traverse the 8 from the list ,,
+
+=======================================================================================================================================================================================================
+  ==========================================================================Delete node single list done ==============================================================================================
 
 
 
