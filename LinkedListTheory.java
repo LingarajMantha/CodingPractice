@@ -149,7 +149,7 @@ INSERTING A ELEMENT AT GIVE NTH POSITON IN LL
   for (int i=1; i<index; i++){
     temp= temp.next;   ///next is also a pointer , 
   }
-  Node node = new Node (val , temp.next)(Node (val , temp.next) , is constructor , just initilizing the values in the constuctor  ,)
+  Node node = new Node (val , temp.next)      (Node (val , temp.next) , is constructor , just initilizing the values in the constuctor  ,)
     temp.next = node ; 
   size++; 
   }
@@ -181,6 +181,20 @@ int val = head.value ;
 -----------------------------------------
 How to delete the TAIL -- 
 
+****  how do we come to the second last element in the list ???
+  iterative over that time - very Important in the delete operation,, for the linked list ,, 
+  
+  So, bu=y using the get function ,, we can he get the ref. pointer to that node ,, by adding values in the index 
+
+  public Node get(int index ){
+  Node node = head ;  
+  for (int i = 0 ; i<index; i++){
+    node = node.next ; 
+  }
+  return node ; 
+  }
+
+  
 Node secondlast = get (size-2);
 ont val = tail.value ; 
 tail = secondLast; 
@@ -194,7 +208,7 @@ writing a get function a to get the second the last elemtn in the list --
 
   publuc Node get (int index);
 Node node = head ;
-for (int = 0 l i<index; i++){
+for (int = 0 : i<index; i++){
   node = node.next; 
   
 }
@@ -202,6 +216,61 @@ return node ;
 
 
 
+
+--------------------------------------------------------------------------------------------------------------
+  DELETE A NODE/NODES  IN LINKED LIST - >
+  First , last , n at a Given Index -- >
+
+In Deleting the first element of the lIst -- 
+   3->4->5->null, 
+  just move the head to the next 
+  head = head.next ; 
+and if we have only on node in list   i.e - 3 (both head and tail are pointing to it ,, then )
+  if (head == null){
+  tail = null
+    }
+
+
+////do code looks like this - 
+
+  public int deleteFirst (){
+  int val = head.balue ; 
+  head = head.next; 
+  if (head == null){
+    tail = null
+  }
+    size --;
+  }
+syso(list.deleteFirst()); 
+
+
+-----------------Deleteing the Last Element of the Lsit or at a given index --------------------------------
+
+  we cant do tail.previous (we can do this in double linked list  )
+  Example --- > 3->5->8->9->17->null  -- if i want ot delete the 17 from th elist ,, 
+  just we need to point the 9 as tail and 9.next as null--
+
+for this happen we need to have a ref value or index value to that node -- like secondLast node or thirsdLast node ,,
+  we can get that by 
+
+  
+  
+    public Node get (int index);
+Node node = head ;
+for (int = 0 : i<index; i++){
+  node = node.next; 
+  
+}
+return node ; 
+
+Node secondlast = get (size-2);
+ont val = tail.value ; 
+tail = secondLast; 
+tail.next= null; 
+return val;
+
+
+  
 
 
 
