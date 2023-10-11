@@ -107,4 +107,22 @@ public class reverseAnArray {
     
 }
 
+======================================================================================================
+TWO DIMENSIONAL ARRAYS -
+  EX - 123  - 0 index
+       456 - 1st index
+       789  - 2 nd index 
+
+  int [][] arr = new int [3][]
+  //having a row size is mandatory..
+  it slike 
+  int [][] arr = {{1,2,3}(this is an array), {4,5,6} (this is an array),{7,8,9}(lly same)}  thats how stored in the heap memory ,, 
+so its called Array of array ,, lly for the 3d array.
+
+  arr in stack memory    and the array elements in the heap memory 
+its like Array of Arrays ,, 
+
+  arr[1]= [4,5,6]
+  arr[2] = [7,8,9]
+
   
