@@ -92,7 +92,7 @@ You must write an algorithm with O(log n) runtime complexity.
             int currentWater = minHeight*(right -left);
             maxWater = Math.max(maxWater, currentWater);
 
-            if (left < right){
+            if ( height[left] < height[right]){
                 left++; 
 
             }
