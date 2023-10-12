@@ -75,6 +75,36 @@ You must write an algorithm with O(log n) runtime complexity.
   
 }
 }
-
-
+========================================================================
+11. Container With Most Water LEET CODE _ MEDIUM PROBLEM 
   
+  
+  class Solution {
+    public int maxArea(int[] height) {
+        int maxWater = 0;
+        //index
+        int left = 0; 
+        int right = height.length - 1; 
+
+        while (left < right ){
+            int minHeight = Math.min(height[left],height[right]);
+           //finding the area l*b
+            int currentWater = minHeight*(right -left);
+            maxWater = Math.max(maxWater, currentWater);
+
+            if (left < right){
+                left++; 
+
+            }
+            else{
+                right--;
+            }
+
+
+        }
+        return maxWater; 
+        
+    }
+}
+
+============================================================================================================  
