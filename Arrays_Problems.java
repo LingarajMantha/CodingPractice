@@ -108,3 +108,76 @@ You must write an algorithm with O(log n) runtime complexity.
 }
 
 ============================================================================================================  
+34. Find First and Last Position of Element in Sorted Array[LEET CODE MEDIUM QUESTION]
+Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value.
+
+If target is not found in the array, return [-1, -1].
+
+You must write an algorithm with O(log n) runtime complexity
+
+  
+class Solution {
+    public int[] searchRange(int[] nums, int target) {
+        
+    int[] result = new int[]{-1, -1};
+
+    // Find the left boundary (starting position)
+    int left = findLeftBoundary(nums, target);
+    if (left == -1) {
+        return result;
+    }
+
+    // Find the right boundary (ending position)
+    int right = findRightBoundary(nums, target);
+
+    result[0] = left;
+    result[1] = right;
+
+    return result;
+}
+
+// Helper function to find the left boundary (starting position)
+private int findLeftBoundary(int[] nums, int target) {
+    int left = 0;
+    int right = nums.length - 1;
+    int result = -1;
+
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+
+        if (nums[mid] == target) {
+            result = mid;
+            right = mid - 1; // Continue searching on the left side
+        } else if (nums[mid] < target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+
+    return result;
+}
+
+// Helper function to find the right boundary (ending position)
+private int findRightBoundary(int[] nums, int target) {
+    int left = 0;
+    int right = nums.length - 1;
+    int result = -1;
+
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+
+        if (nums[mid] == target) {
+            result = mid;
+            left = mid + 1; // Continue searching on the right side
+        } else if (nums[mid] < target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+
+    return result;
+}
+
+    }
