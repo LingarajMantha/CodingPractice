@@ -12,6 +12,9 @@ void revrseString (char[] s ){
     char temp = s[left];
     s[left]= r[right];
     s[right]= temp;
+
+    left++;
+    right --; 
   }
 }
 }
