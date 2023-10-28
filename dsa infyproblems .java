@@ -74,9 +74,10 @@ class HelloWorld {
 }
 ======================================================================================================================
 question 3 - > 
-You are given a circular array A containing  the N integer . You can perform the following operations on this array any numbers of items. 
--> For each i, replace A[i] by A[i-1], A[i], A[i+1], i.e. you can keep the current element or replae it by afjecnt element . 
-   exist even for the forst and teh last element . In PArticular , A[i-1], for i=0 is the last element.
+You are given a circular array A containing  the N integer . You can perform the following operations on this array 
+any numbers of items. 
+-> For each i, replace A[i] by A[i-1], A[i], A[i+1], i.e. you can keep the current element or replae it by adjecnt element . 
+   exist even for the first and the last element . In PArticular , A[i-1], for i=0 is the last element.
 
 determine the minium number of steps needed to make all the elements of tha array equal .
 
