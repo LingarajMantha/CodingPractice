@@ -120,19 +120,20 @@ public class MinimumStepsToEqualizeArray {
 ===============================================================================================================================================================
 Question 3 -- >
 
-A compact disk can be represented as a abinary strin. Teh CD is divided into N sectors where 0 is adjecent to sector N-1. You are given the initial state of the CD in the string initialState
-You store/delete some files on the CD resulting in the state dented by the string finalState.
+A compact disk can be represented as a binary string. The CD is divided into N sectors where 0 is adjecent to sector N-1. You are given the initial state of the CD in
+the string "initialState".You store/delete some files on the CD resulting in the state denoted by the string "finalState".
 
-The CD writer is given to you in the string writer . The 1's in the string denote the sectors above which  fixed writing heads are located . You can write CD by doing the following 
+The CD writer is given to you in the string "writer" . The 1's in the string denote the sectors above which  fixed writing heads are located . You can write CD by 
+doing the following 
 two time  intensive operations.
 
-1. Rotate the CD closk wise or anti clock wir=se by 1 step which takes 2 seconds . Note that the writings heads are fixed while the CD rotates .
+1. Rotate the CD clock wise or anti clock wise by 1 step which takes 2 seconds . Note that the writings heads are fixed while the CD rotates .
     2. Use any fixed writing head to changes the bit under it which takes 3 seconds . Note that you can use only 1 head at a time , 
 
-You can mingle the above operations as you deem fit. rotate the CD a few steps . use some head(s), rotate in other direction , use some head(s) etc. 
+You can mingle the above operations as you deem fit.i.e rotate the CD a few steps . use some head(s), rotate in other direction , use some head(s) etc. 
 
-Find the minimum time taken to change the CD from initialState to finalState goiven the fixed writing heads are located in the string "writer " return -1,, if you cant use the write 
-to achive the goal . All the string have equal lengths . 
+Find the minimum time taken to change the CD from initialState to finalState given the fixed writing heads are located in the string "writer " return -1,, 
+if you cant use the write to achive the goal . All the string have equal lengths . 
 
 
 INput Firmat - > 
