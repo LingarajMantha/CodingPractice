@@ -131,4 +131,21 @@ two time  intensive operations.
 
 You can mingle the above operations as you deem fit. rotate the CD a few steps . use some head(s), rotate in other direction , use some head(s) etc. 
 
-Find the minimum
+Find the minimum time taken to change the CD from initialState to finalState goiven the fixed writing heads are located in the string "writer " return -1,, if you cant use the write 
+to achive the goal . All the string have equal lengths . 
+
+
+INput Firmat - > 
+The first line contains a string initialState , denoting teh initial ocntents .
+The next line contains a sring , finalState , denoting the final contents 
+The next line conatins a string writer, denoting the fixed write heads .
+
+constraints ->
+
+1<= len(initialState )<=50
+    1<= len(finalState)<=50;
+1<=len(writer)<=50;
+
+smaple input - > 10001, 11101, 01010  sample output - > 8
+lly , 11010 , 01010, 00000    --- > 1 
+0101010010101,  0101001010101,     1010101010010     - > 4 
