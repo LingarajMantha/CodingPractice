@@ -94,3 +94,41 @@ i<=A[i]<=10^5,
 smaple input - Size = 4
 2,2,1,1  output = 1,, 
 size = 4 , input => 1,2,3,4 , output = 2
+
+------------------ few test cass are gettin wrong ,, little bit need to check on ----------------------------
+import java.util.Scanner;
+
+public class MinimumStepsToEqualizeArray {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        int[] A = new int[N];
+
+        for (int i = 0; i < N; i++) {
+            A[i] = scanner.nextInt();
+        }
+
+        int maxDiff = 0;
+        for (int i = 0; i < N; i++) {
+            int diff = Math.abs(A[i] - A[(i + 1) % N]);
+            maxDiff = Math.max(maxDiff, diff);
+        }
+
+        System.out.println("Minimum number of steps needed: " + maxDiff);
+    }
+}
+===============================================================================================================================================================
+Question 3 -- >
+
+A compact disk can be represented as a abinary strin. Teh CD is divided into N sectors where 0 is adjecent to sector N-1. You are given the initial state of the CD in the string initialState
+You store/delete some files on the CD resulting in the state dented by the string finalState.
+
+The CD writer is given to you in the string writer . The 1's in the string denote the sectors above which  fixed writing heads are located . You can write CD by doing the following 
+two time  intensive operations.
+
+1. Rotate the CD closk wise or anti clock wir=se by 1 step which takes 2 seconds . Note that the writings heads are fixed while the CD rotates .
+    2. Use any fixed writing head to changes the bit under it which takes 3 seconds . Note that you can use only 1 head at a time , 
+
+You can mingle the above operations as you deem fit. rotate the CD a few steps . use some head(s), rotate in other direction , use some head(s) etc. 
+
+Find the minimum
