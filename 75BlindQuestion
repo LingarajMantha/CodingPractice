@@ -33,8 +33,40 @@ class Solution {
 --> Arrays.sort(nums) - sorts the array in ascendign order
 ====================================================================================================================
 Problem 6 - 
-56. Maximum subarray 
+53. Maximum subarray 
 Given an integer array nums, find the subarray with the largest sum, and return its sum.
+Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
+Output: 6
+Explanation: The subarray [4,-1,2,1] has the largest sum 6.
+
+Input: nums = [5,4,-1,7,8]
+Output: 23
+Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
+steps - > take out the all the possible subarrays 
+like  taking ex-2 >{5}, {5,4}, {5,4,-1}......, {4,-1}...., {-1,7}....
+and taking out the sub array with the maximum sum 
+
+we can solve this by using 3 for loops (O(n^3)), 
+lly with 2 for loops O(n^2), 
+we need to solve in O(n), i.e using the Kadane's Algo, the optimised array 
+
+KADANE'S ALGO - 
+STEP 1 - sum = sum + arr[i]  
+STEP 2 - maxi_update = maxi = (maxi, sum)
+STEP 3 - if (sum<0){sum=0};
+
+
+EX- nums = [-2,1,-3,4,-1,2,1,-5,4]
+initiially sum = 0 , maxi = nums[0]=-2,  and if(sum<0){sum = 0},
+
+for i=0, sum = 0+(-2)=-2  , maxi =max(maxi, sum )=>max(-2,-2 ), sum=0;
+i=1,  sum=0+1=1, maxi = max(-2, 1)= 1 , sum = 1;
+i=2 sum = 1+(-3)=-2, maxi = (1, -2) = 1, sum = 1;
+i=6 sum = 5+1=6, maxi =max(5,6)=6, sum = 6;
+....i=7 , sum = 6+(-5)=1, maxi = max(6, 1)=6, sum = 1;
+..i=8
+
+so the max sum = 6 , 
 
 
 
